@@ -420,7 +420,7 @@ const get_products = async ({ query: { access_token } }, res) => {
 };
 
 // Method: DELETE; Description: Delete product by created_by
-const delete_by_category_and_created_by = async ({ type, _id }) => {
+const dsignelete_by_category_and_created_by = async ({ type, _id }) => {
   switch (type) {
     case "house-plants":
       return await house_plants.findByIdAndDelete(_id);

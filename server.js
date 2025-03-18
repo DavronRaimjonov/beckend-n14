@@ -11,7 +11,11 @@ const numCPU = os.cpus().length;
 const app = express();
 
 // Security
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(helmet());
 
 // Body parsers

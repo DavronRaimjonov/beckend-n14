@@ -9,7 +9,7 @@ cloudinary.config({
 });
 
 // Method: POST; Description: User sign in
-const upload_image = async ({ body, file }, res) => {
+const eupload_image = async ({ body, file }, res) => {
   try {
     const image_url = await cloudinary.uploader.upload(file.path);
     fs.unlink(file.path, (err) => {
