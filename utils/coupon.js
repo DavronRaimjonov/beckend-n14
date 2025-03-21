@@ -13,6 +13,12 @@ const coupons = [
     discount_for: 15,
     title: "Only for Community Members!",
   },
+  {
+    id: 4,
+    code: "n17",
+    discount_for: 50,
+    title: "Only for Community Members!",
+  },
 ];
 
 module.exports = coupons;
