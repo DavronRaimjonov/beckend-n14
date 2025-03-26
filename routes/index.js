@@ -27,6 +27,12 @@ router.use("/flower/category", require("./category_route"));
 router.use("/flower/category", require("./flower_route"));
 // Features
 router.use("/features", require("./features_route"));
-router.post("/upload", verifyToken, upload.single("image"), upload_image);
+router.post(
+  "/upload",
+  permissionChecker,
+  verifyToken,
+  upload.single("image"),
+  upload_image
+);
 
 module.exports = router;
