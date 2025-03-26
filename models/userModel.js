@@ -87,6 +87,11 @@ const user_model = new Schema({
     required: true,
     default: [],
   },
+  phone_number: {
+    type: String,
+    required: true,
+    default: "",
+  },
 });
 
 const user = users_db.model("users", user_model);

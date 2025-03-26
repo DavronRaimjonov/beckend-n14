@@ -247,14 +247,18 @@ const update_account_details = async ({ body, query }, res) => {
     if (!(await user.find({ username })))
       return res.status(400).json(username_unique);
 
-    await user.findByIdAndUpdate(_id, {
-      name,
-      surname,
-      email,
-      phone_number,
-      username,
-      profile_photo,
-    });
+    await user.findByIdAndUpdate(
+      _id,
+      {
+        name,
+        surname,
+        email,
+        phone_number,
+        username,
+        profile_photo,
+      },
+      { new: true }
+    );
     return res.status(201).json({ message: "success" });
   } catch (error) {
     errorStatus500(error, res);
